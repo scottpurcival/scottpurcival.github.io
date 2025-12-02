@@ -1,0 +1,360 @@
+/* Layout */
+html 
+{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+*,:after,:before {box-sizing: inherit}
+
+body 
+{
+    margin: 0;
+    background-color: black;
+}
+
+header 
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.header-image 
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.header-image>img {width:80%}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px
+}
+
+p,a
+{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;    
+    font-size: 18px
+}
+
+a {color: inherit}
+
+h1 {font-size: 36px}
+h2 {font-size: 30px}
+h3 {font-size: 24px}
+h4 {font-size: 20px}
+h5 {font-size: 18px}
+h6 {font-size: 16px}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.image-scale-to-width {
+    max-width: 100%;
+    height: auto
+}
+
+.bar {
+    width: 100%;
+    overflow: hidden
+}
+
+.bar .bar-item {
+    padding: 8px 16px;
+    width: auto;
+    border: none;
+    display: inline;
+    outline: 0
+}
+
+.anchor-scroll-padding
+{
+    scroll-margin-top: 105px;
+}
+
+.content-block
+{
+    box-shadow: inset 0px 5px 9px 0px #0007;
+}
+.content-block>h3,.content-block>h2 {padding-bottom: 15px;}
+
+.call-to-action-bar
+{
+    box-shadow: inset 0px 5px 9px 0px #0007;
+}
+
+/* Responsive width tags */
+.col{width:100%}
+
+/* Small - sub 600px wide */
+.col.s1{width:8.33333%}
+.col.s2{width:16.66666%}
+.col.s3{width:24.99999%}
+.col.s4{width:33.33333%}
+.col.s5{width:41.66666%}
+.col.s6{width:49.99999%}
+.col.s7{width:58.33333%}
+.col.s8{width:66.66666%}
+.col.s9{width:74.99999%}
+.col.s10{width:83.33333%}
+.col.s11{width:91.66666%}
+.col.s12{width:99.99999%}
+
+/* Medium - between 601px and 993px wide */
+@media (min-width:801px)
+{
+    .col.m1{width:8.33333%}
+    .col.m2{width:16.66666%}
+    .col.m3{width:24.99999%}
+    .col.m4{width:33.33333%}
+    .col.m5{width:41.66666%}
+    .col.m6{width:49.99999%}
+    .col.m7{width:58.33333%}
+    .col.m8{width:66.66666%}
+    .col.m9{width:74.99999%}
+    .col.m10{width:83.33333%}
+    .col.m11{width:91.66666%}
+    .col.m12{width:99.99999%}
+}
+
+/* Large - > 993px wide */
+@media (min-width:1081px)
+{
+    .col.l1{width:8.33333%}
+    .col.l2{width:16.66666%}
+    .col.l3{width:24.99999%}
+    .col.l4{width:33.33333%}
+    .col.l5{width:41.66666%}
+    .col.l6{width:49.99999%}
+    .col.l7{width:58.33333%}
+    .col.l8{width:66.66666%}
+    .col.l9{width:74.99999%}
+    .col.l10{width:83.33333%}
+    .col.l11{width:91.66666%}
+    .col.l12{width:99.99999%}
+
+    h1 {font-size: 42px}
+    h2 {font-size: 36px}
+    h3 {font-size: 30px}
+    h4 {font-size: 24px}
+    h5 {font-size: 20px}
+    h6 {font-size: 18px}
+}
+
+/* Phone specific changes */
+@media (max-width:800px) 
+{
+    header {padding-top: 110px}
+    .header-content {flex-direction:column; text-align:center;}
+    .header-content .col {width:80%}
+    .hide-small {display: none !important}
+    
+    .showcase-buttons { background-size: cover !important; }
+}
+
+/* Navbar */
+.top {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    box-shadow: 0px 5px 9px 0px #000;
+}
+
+.center {text-align: center !important}
+
+.padding {padding: 8px 16px !important}
+.padding-row 
+{
+    padding: 64px 16px;
+    width: 100%;
+}
+.padding-sub-row 
+{
+    padding: 16px 16px;
+    width: 100%;
+}
+.padding-16 
+{
+    padding-top: 16px !important;
+    padding-bottom: 16px !important
+}
+.padding-bottom-16 {padding-bottom: 16px;}
+
+/* Buttons */
+.button-normal {
+    color: #eff6ee !important;
+    background-color: #4f9dae !important;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 12px 20px;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 18px;
+    margin-top: 16px;
+    box-shadow: 0px 5px 9px #0007;
+}
+.button-normal:hover {
+    color: #000 !important;
+    background-color: #eff6ee !important
+}
+.button-normal a {
+    text-decoration: none !important;
+    font-size: 20px;
+}
+
+.button-menu {
+    color: #eff6ee !important;
+    background-color: inherit !important;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none !important;
+    font-size: 20px;
+    transition: box-shadow 0.25s;
+}
+.button-menu:hover {
+    box-shadow: inset 0px -4px !important;
+}
+.button-menu a {
+    text-decoration: none !important
+}
+
+/* Showcase */
+.showcase
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 600px;
+    width: 100%;
+    background-image: url(images/showcase/background.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0px 0px 10px 5px #000;
+}
+.showcase-logo
+{
+    max-height: 40%;
+    width: auto;
+    max-width: 90%;
+    object-position: center;
+    padding-bottom: 30px;
+}
+.showcase-buttons
+{
+    padding: 0px 8px 16px 8px !important;
+    text-align: center !important;
+    background-image: url(images/showcase/buttonBackground.jpg);
+    background-size: 100% 100%;
+}
+.showcase-button {
+    color: #eff6ee !important;
+    background-image: url(images/showcase/button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 20px 20px;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 18px;
+    margin-top: 16px;;
+    
+    text-decoration: none !important;
+    font-size: 22px;
+}
+.showcase-button:hover {
+   background-image: url(images/showcase/buttonHover.png);
+}
+.showcase-button:active {
+   background-image: url(images/showcase/buttonClick.png);
+}
+
+/* Forms */
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+.form-row
+{
+    padding-bottom: 16px;
+}
+label
+{    
+    padding-bottom: 8px;
+}
+input,textarea,label
+{    
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    width: 100%;
+}
+
+/* Colours */
+
+
+.color-titlebar {color: #ffffff !important; background-color: #000000 !important}
+.color-menubar {color: #eff6ee !important; background-color: #1e1e1e !important}
+.color-cta {color: #eff6ee !important; background-color: #d08a27 !important}
+.color-about { color: #f8d8c5 !important; background-color: #d27534 !important}
+.color-showcase { color: #eff6ee !important; background-color: #081623 !important}
+.color-contact {color: #000 !important; background-color: #fff !important}
+.color-footer {color: #fff !important; background-color: #000 !important}
+
+/* Google Fonts */
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.noto-sans-400 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.noto-sans-700 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.noto-sans-symbols-400 {
+  font-family: "Noto Sans Symbols", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

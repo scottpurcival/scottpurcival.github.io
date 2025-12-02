@@ -1,19 +1,84 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>Scott Purcival - Game Programmer</title>
-  <style type="text/css">
-    body {background-color: #000;}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Arial; color: #ffffffff;}
-    span.s1 {font-kerning: none}
-  </style>
+    <title>Scott Purcival - Game Programmer</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Symbols:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css?date=20251202">
 </head>
+
 <body>
-  <center>
-<p class="p1"><span class="s1">Site under construction - please come back soon!</span></p>
-<p class="p1"><span class="s1">10 Aug 2025</span></p>
-    </center>
+    <!-- Navbar (sit on top) -->
+    <div class="top">
+        <div class="bar color-titlebar padding">
+            <a href="#home">
+                <h3 class="bebas-neue-regular">Scott Purcival</h3>
+            </a>
+        </div>
+        <div class="bar center color-menubar padding hide-small">
+            <div class="noto-sans-400">
+                <a href="index.html#showcase" class="bar-item button-menu">Portfolio</a>
+                <a href="blog.html" class="bar-item button-menu">Blog</a>
+                <a href="media.html" class="bar-item button-menu">Media</a>
+                <a href="games.html" class="bar-item button-menu">Games</a>
+                <a href="tools.html" class="bar-item button-menu">Tools</a>
+                <a href="contact.html" class="bar-item button-menu">Contact</a>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="bar center color-cta padding call-to-action-bar">
+            <div class="noto-sans-400">
+                <a href="#showcase" class="bar-item button-menu">Open to work!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="color-about" id="home">
+        <div class="header-content padding-row padding-32">
+            <div class="col l10">
+                <h1 class="center bebas-neue-regular">Scott Purcival</h1>
+                <h3 class="center noto-sans-400">Game Programmer</h3>
+                <div class="button-normal center">
+                    <a href="contact.html">Get in contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Page content -->
+    <div class="color-showcase anchor-scroll-padding content-block showcase" id="showcase">
+      <div class="col l6 m8 center content padding-sub-row">
+          <p>
+              Cool stuff goes here
+          </p>
+      </div>
+        
+    </div>
+    
+    <div class="color-contact anchor-scroll-padding content-block" id="contact">
+        <div class="col l6 m8 content center padding-row">
+            <h3 class="padding-bottom-16">Get In Contact</h3>
+            <p>scott@purcival.com</p>
+            <div class="button-normal">
+                <a href="mailto:scott@purcival.com">Send me an email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="center color-footer padding-16 content-block">
+        <p>©2025 Scott Purcival</p>
+    </footer>
 </body>
+
 </html>
