@@ -18,12 +18,13 @@
 <body>
     <!-- Navbar (sit on top) -->
     <div class="top">
-        <div class="bar color-titlebar padding">
+        <div class="bar section-titlebar padding">
             <a href="#home">
-                <h3 class="bebas-neue-regular">Scott Purcival</h3>
+                <h1 class="bebas-neue-regular">Scott Purcival</h1>
+                <h2 class="noto-sans-400 tagline">Game Programmer</h2>
             </a>
         </div>
-        <div class="bar center color-menubar padding hide-small">
+        <div class="bar center section-menubar padding hide-small">
             <div class="noto-sans-400">
                 <a href="index.html#showcase" class="bar-item button-menu">Portfolio</a>
                 <a href="blog.html" class="bar-item button-menu">Blog</a>
@@ -34,21 +35,23 @@
             </div>
         </div>
         
-        <!-- CTA -->
+        <!-- CTA
         <div class="bar center color-cta padding call-to-action-bar">
             <div class="noto-sans-400">
                 <a href="#showcase" class="bar-item button-menu">Open to work!</a>
             </div>
         </div>
+        -->
     </div>
 
     <!-- Header -->
-    <header class="color-about" id="home">
-        <div class="header-content padding-row padding-32">
-            <div class="col l10">
-                <h1 class="center bebas-neue-regular">Scott Purcival</h1>
-                <h3 class="center noto-sans-400">Game Programmer</h3>
-                <div class="button-normal center">
+    <header class="section-header" id="home">
+        <div class="header-content padding-header">
+            <div class="col l10 center">
+                <h1 class="bebas-neue-regular" style="font-size: 68px">Scott Purcival</h1>
+                <h2 class="noto-sans-400 tagline">Game Programmer</h2>
+                <div class="padding-bottom-16"></div>
+                <div class="button-normal">
                     <a href="contact.html">Get in contact</a>
                 </div>
             </div>
@@ -56,7 +59,36 @@
     </header>
     
     <!-- Page content -->
-    <div class="color-showcase anchor-scroll-padding content-block showcase" id="showcase">
+    <div class="section-about anchor-scroll-padding content-block" id="about">
+        <div class="col l12 m8 center content padding-sub-row">
+            <h3 class="content-block-title bebas-neue-regular">About Me</h3>
+            <div class="content-block-text">
+                <h4>I am a Game Programmer with an eye for Design.</h4>
+                <div>
+                    <p>
+                        I have a knack for big data and solutions to complex problems, and an unhealthy obsession with polish.<br>
+                        My mantra is 'everything is possible'. If I don't know how to do something, I will persist until I figure it out.<br>
+                        When I am not working or studying, I like to make my own games, build custom gaming PCs, play co-op games with my wife, and spend time outdoors.
+                    </p>
+                    <p>
+                        <b>My notable acheivements of late are;</b><br>
+                    </p>
+                    <ul>
+                        <li>2020 - <a href="https://web.archive.org/web/20230325111031/https://scott.purcival.com/2021/03/20/the-frogs-princess/">Frog's Princess</a> Released to Steam, App Store and Google Play - Joy Everafter Stories</li>
+                        <li>2019 - Two rapid development projects for Western Downs Libraries - <a href="https://web.archive.org/web/20230325111031/https://scott.purcival.com/2021/03/21/kinect-touchscreen/">Bookworm Blitz!</a> and <a href="https://web.archive.org/web/20230325111031/https://scott.purcival.com/2021/03/21/greenscreen-photo-booth/">Greenscreen Photo Booth</a>.</li>
+                        <li>2018 - Adv. Dip. Professional Game Development (Programming) - The Academy of Interactive Entertainment (AIE)</li>
+                        <li>2018 - <a href="https://web.archive.org/web/20230325111031/http://scott.purcival.com/2018/01/20/the-ballmer-peak-part-2/">Ballmer Peak</a> - Published my first game to the Google Play store, in early access.</li>
+                        <li>2017 - Second Place - NASA Space Apps Challenge, UTS Sydney with our entry <a href="https://web.archive.org/web/20230325111031/http://scott.purcival.com/2017/05/24/2nd-place-at-nasa-space-apps-o/">-KEN-</a></li>
+                    </ul>
+                    <p>
+                    I am also an avid gamer myself, dad to 3 gamer kids, and build custom gaming PCs in my free time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-showcase anchor-scroll-padding content-block" id="showcase">
       <div class="col l6 m8 center content padding-sub-row">
           <p>
               Cool stuff goes here
@@ -65,7 +97,7 @@
         
     </div>
     
-    <div class="color-contact anchor-scroll-padding content-block" id="contact">
+    <div class="section-contact anchor-scroll-padding content-block" id="contact">
         <div class="col l6 m8 content center padding-row">
             <h3 class="padding-bottom-16">Get In Contact</h3>
             <p>scott@purcival.com</p>
@@ -76,8 +108,8 @@
     </div>
 
     <!-- Footer -->
-    <footer class="center color-footer padding-16 content-block">
-        <p>©2025 Scott Purcival</p>
+    <footer class="center section-footer padding-16 content-block">
+        <p>© 2025 Scott Purcival</p>
     </footer>
 </body>
 

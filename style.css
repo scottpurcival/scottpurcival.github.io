@@ -1,18 +1,30 @@
 /* Layout */
-html 
+html
 {
     box-sizing: border-box;
     overflow-x: hidden;
 }
 *,:after,:before {box-sizing: inherit}
 
-body 
+body
 {
     margin: 0;
     background-color: black;
+    background-image: url(images/newbgsml.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 18px
 }
 
-header 
+header
 {
     display: flex;
     justify-content: center;
@@ -22,10 +34,10 @@ header
 .header-content {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
-.header-image 
+.header-image
 {
     position: relative;
     display: flex;
@@ -36,20 +48,25 @@ header
 .content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1500px
+    max-width: 1200px;
 }
 
-p,a
-{
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.5;    
-    font-size: 18px
+ul {
+    list-style-type: square;
+    list-style-position: outside;
+    padding-inline-start: 0px;
 }
 
-a {color: inherit}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+a {
+    color: #f0c45c;
+    text-decoration: none;
+}
 
 h1 {font-size: 36px}
 h2 {font-size: 30px}
@@ -94,9 +111,18 @@ img {
 
 .content-block
 {
-    box-shadow: inset 0px 5px 9px 0px #0007;
+
 }
-.content-block>h3,.content-block>h2 {padding-bottom: 15px;}
+.content-block-title {
+    text-transform: uppercase;
+    padding-bottom: 16px;
+
+    font-size: 48px !important;
+}
+
+.content-block-text {
+    text-align: left;
+}
 
 .call-to-action-bar
 {
@@ -162,13 +188,13 @@ img {
 }
 
 /* Phone specific changes */
-@media (max-width:800px) 
+@media (max-width:800px)
 {
     header {padding-top: 110px}
     .header-content {flex-direction:column; text-align:center;}
     .header-content .col {width:80%}
     .hide-small {display: none !important}
-    
+
     .showcase-buttons { background-size: cover !important; }
 }
 
@@ -184,17 +210,22 @@ img {
 .center {text-align: center !important}
 
 .padding {padding: 8px 16px !important}
-.padding-row 
+.padding-header
+{
+    padding: 200px 200px;
+    width: 100%;
+}
+.padding-row
 {
     padding: 64px 16px;
     width: 100%;
 }
-.padding-sub-row 
+.padding-sub-row
 {
     padding: 16px 16px;
     width: 100%;
 }
-.padding-16 
+.padding-16
 {
     padding-top: 16px !important;
     padding-bottom: 16px !important
@@ -204,7 +235,7 @@ img {
 /* Buttons */
 .button-normal {
     color: #eff6ee !important;
-    background-color: #4f9dae !important;
+    background-color: #5e8bb8 !important;
     cursor: pointer;
     border-radius: 15px;
     padding: 12px 20px;
@@ -214,10 +245,14 @@ img {
     font-size: 18px;
     margin-top: 16px;
     box-shadow: 0px 5px 9px #0007;
+
+    a {color: #eff6ee !important;}
 }
 .button-normal:hover {
     color: #000 !important;
-    background-color: #eff6ee !important
+    background-color: #eff6ee !important;
+
+    a {color: #000 !important;}
 }
 .button-normal a {
     text-decoration: none !important;
@@ -237,7 +272,7 @@ img {
     transition: box-shadow 0.25s;
 }
 .button-menu:hover {
-    box-shadow: inset 0px -4px !important;
+    box-shadow: inset 0px -4px #f0c45c !important;
 }
 .button-menu a {
     text-decoration: none !important
@@ -251,18 +286,6 @@ img {
     align-items: flex-end;
     height: 600px;
     width: 100%;
-    background-image: url(images/showcase/background.jpg);
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 0px 0px 10px 5px #000;
-}
-.showcase-logo
-{
-    max-height: 40%;
-    width: auto;
-    max-width: 90%;
-    object-position: center;
-    padding-bottom: 30px;
 }
 .showcase-buttons
 {
@@ -284,7 +307,7 @@ img {
     white-space: nowrap;
     font-size: 18px;
     margin-top: 16px;;
-    
+
     text-decoration: none !important;
     font-size: 22px;
 }
@@ -306,11 +329,11 @@ form
     padding-bottom: 16px;
 }
 label
-{    
+{
     padding-bottom: 8px;
 }
 input,textarea,label
-{    
+{
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -319,16 +342,45 @@ input,textarea,label
     width: 100%;
 }
 
-/* Colours */
+/* Sections */
+.section-titlebar {
+    display: block;
+    color: #ffffff !important;
+    background-color: #000000 !important;
 
+    a {
+        text-decoration: none !important;
+        color: #ffffff !important;
+    }
+    h1 {
+        font-size: 48px !important;
+        display: inherit;
+        padding-right: 8px;
+    }
+    h2 {
+        font-size: 18px !important;
+        display: inherit;
+    }
+}
 
-.color-titlebar {color: #ffffff !important; background-color: #000000 !important}
-.color-menubar {color: #eff6ee !important; background-color: #1e1e1e !important}
-.color-cta {color: #eff6ee !important; background-color: #d08a27 !important}
-.color-about { color: #f8d8c5 !important; background-color: #d27534 !important}
-.color-showcase { color: #eff6ee !important; background-color: #081623 !important}
-.color-contact {color: #000 !important; background-color: #fff !important}
-.color-footer {color: #fff !important; background-color: #000 !important}
+.tagline {color: #f0c45c !important;}
+
+.section-menubar {color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.2) !important; backdrop-filter: blur(10px);}
+
+.section-cta {color: #eff6ee !important; background-color: #d08a27 !important}
+
+.section-header {
+    color: #ffffff !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.section-about { color: #eff6ee !important; background-color: #080a0c !important}
+
+.section-showcase { color: #eff6ee !important; background-color: #080a0c !important}
+
+.section-contact {color: #ffffff !important; background-color: rgba(0, 0, 0, 0) !important; backdrop-filter: blur(10px);}
+
+.section-footer {color: #fff !important; background-color: #000 !important}
 
 /* Google Fonts */
 .bebas-neue-regular {
