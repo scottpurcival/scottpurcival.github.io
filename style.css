@@ -37,14 +37,6 @@ header
     align-items: center;
 }
 
-.header-image
-{
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.header-image>img {width:80%}
-
 .content {
     margin-left: auto;
     margin-right: auto;
@@ -67,6 +59,8 @@ a {
     color: #f0c45c;
     text-decoration: none;
 }
+
+a:hover {color: #f0c45c !important;}
 
 h1 {font-size: 36px}
 h2 {font-size: 30px}
@@ -190,10 +184,10 @@ img {
 /* Phone specific changes */
 @media (max-width:800px)
 {
-    header {padding-top: 110px}
+    /*header {padding-top: 110px}
     .header-content {flex-direction:column; text-align:center;}
     .header-content .col {width:80%}
-    .hide-small {display: none !important}
+    .hide-small {display: none !important}*/
 }
 
 /* Navbar */
@@ -210,7 +204,7 @@ img {
 .padding {padding: 8px 16px !important}
 .padding-header
 {
-    padding: 200px 200px;
+    padding: 200px 0 200px 0;
     width: 100%;
 }
 .padding-row
@@ -275,6 +269,25 @@ img {
     text-decoration: none !important
 }
 
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 48px;
+    a {
+        color: #eff6ee;
+        min-width: 80px;
+        min-height: 80px;
+    }
+    a:hover {
+        color: #f0c45c !important;
+    }
+    i {
+        vertical-align: middle;
+    }
+}
+
 /* Showcase */
 .showcase
 {
@@ -287,7 +300,7 @@ img {
 
 .showcase-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding-bottom: 16px;
 }
 
@@ -363,7 +376,8 @@ input,textarea,label
 
 /* Sections */
 .section-titlebar {
-    display: block;
+    display: flex;
+    flex-direction: row;
     color: #ffffff !important;
     background-color: #000000 !important;
 
@@ -379,6 +393,27 @@ input,textarea,label
     h2 {
         font-size: 18px !important;
         display: inherit;
+    }
+    .titlebar-left {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        h1,h2 {margin: 0;}
+    }
+    .social-buttons {
+        font-size: 36px;
+        a {
+            min-width: 60px;
+            min-height: 60px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .social-buttons {display: none;}
+        .titlebar-left {
+            flex-direction: column;
+
+        }
     }
 }
 
@@ -429,4 +464,3 @@ input,textarea,label
   font-weight: 400;
   font-style: normal;
 }
-

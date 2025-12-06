@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Symbols:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
     <link rel="stylesheet" href="style.css?date=20251202">
 </head>
 
@@ -19,10 +22,16 @@
     <!-- Navbar (sit on top) -->
     <div class="top">
         <div class="bar section-titlebar padding">
-            <a href="#home">
-                <h1 class="bebas-neue-regular">Scott Purcival</h1>
-                <h2 class="noto-sans-400 tagline">Game Programmer</h2>
-            </a>
+            <div class="titlebar-left">
+                <a href="index.html#home"><h1 class="bebas-neue-regular">Scott Purcival</h1></a>
+                <a href="index.html#home"><h2 class="noto-sans-400 tagline">Game Programmer</h2></a>
+            </div>
+            <div style="flex-grow: 1"></div>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/scott-purcival-12145356/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/scottpurcival"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:scott@purcival.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
         </div>
         <div class="bar center section-menubar padding hide-small">
             <div class="noto-sans-400">
@@ -34,14 +43,6 @@
                 <a href="contact.html" class="bar-item button-menu">Contact</a>
             </div>
         </div>
-        
-        <!-- CTA
-        <div class="bar center color-cta padding call-to-action-bar">
-            <div class="noto-sans-400">
-                <a href="#showcase" class="bar-item button-menu">Open to work!</a>
-            </div>
-        </div>
-        -->
     </div>
 
     <!-- Header -->
@@ -144,8 +145,12 @@
     
     <div class="section-contact anchor-scroll-padding content-block" id="contact">
         <div class="col l6 m8 content center padding-row">
-            <h3 class="padding-bottom-16">Get In Contact</h3>
-            <p>scott@purcival.com</p>
+            <h3>Get In Contact</h3>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/scott-purcival-12145356/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/scottpurcival"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:scott@purcival.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
             <div class="button-normal">
                 <a href="mailto:scott@purcival.com">Send me an email</a>
             </div>
