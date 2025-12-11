@@ -327,8 +327,9 @@ img {
 
 .showcase-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
     padding-bottom: 16px;
+    justify-content: center;
 }
 
 .showcase-card {
@@ -347,6 +348,11 @@ img {
         margin-top: 8px;
     }
 
+    .dev-event {
+        text-align: center;
+        font-size: 1rem;
+    }
+
     margin: 8px;
     padding: 16px;
     border-radius: 10px;
@@ -358,13 +364,6 @@ img {
 }
 
 .showcase-card-media {
-    width: 100%;
-    aspect-ratio: 2.14;
-    object-fit: cover;
-    border-radius: 5px 5px 0 0;
-}
-
-.showcase-card-video {
     width: 100%;
     aspect-ratio: 2.14;
     object-fit: cover;
