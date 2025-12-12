@@ -534,6 +534,7 @@ input,textarea,label
     flex-direction: row;
     gap: 64px;
     align-items: center;
+    justify-content: center;
 
     @media (max-width: 1400px) {
         flex-direction: column;
