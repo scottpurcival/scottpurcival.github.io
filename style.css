@@ -337,7 +337,7 @@ img {
 
 .showcase-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding-bottom: 16px;
     justify-content: center;
 }
@@ -517,7 +517,7 @@ input,textarea,label
     gap: 64px;
     align-items: center;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1400px) {
         flex-direction: column;
     }
 }
@@ -591,7 +591,7 @@ input,textarea,label
 /* Unity Player */
 .unity-player {
     max-height: calc(100vh - 250px);
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9.1;
     border: 0;
     overflow: hidden;
 }
