@@ -215,6 +215,7 @@ img {
 @media (min-width:650px)
 {
     .hide-large {display: none !important}
+    .mobile-home-button {display:none !important;}
 }
 
 /* Navbar */
@@ -226,12 +227,21 @@ img {
     box-shadow: 0px 5px 9px 0px #000;
 }
 
+.mobile-home-button {
+    align-content: center;
+    font-size: 32px;
+}
+
 .center {text-align: center !important}
 
 .padding {padding: 8px 16px !important}
 .padding-header
 {
     padding: 200px 0 200px 0;
+}
+
+.padding-header-small {
+    padding: 50px 0 50px 0;
 }
 .padding-row
 {
@@ -332,6 +342,13 @@ img {
     justify-content: center;
 }
 
+.media-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 600px));
+    padding-bottom: 16px;
+    justify-content: center;
+}
+
 .showcase-card {
     img {
 
@@ -404,6 +421,10 @@ img {
     }
 }
 
+.showcase-readmore {
+    text-align: right !important;
+}
+
 /* Forms */
 form
 {
@@ -466,7 +487,6 @@ input,textarea,label
         .social-buttons {display: none;}
         .titlebar-left {
             flex-direction: column;
-
         }
     }
 }
@@ -507,8 +527,9 @@ input,textarea,label
 
 .section-subpage-header {
     color: #ffffff !important;
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
     flex-grow: 1;
+    backdrop-filter: blur(10px);
 }
 
 .section-showcase {
@@ -524,6 +545,13 @@ input,textarea,label
 .section-portfolio-personal { color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); }
 
 .section-portfolio-professional { color: #eff6ee !important; background-color: #080a0c !important }
+
+.section-media {
+    padding-top: 16px;
+    color: #eff6ee !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px);
+}
 
 /* Google Fonts */
 .bebas-neue-regular {
@@ -556,7 +584,7 @@ input,textarea,label
 
 /* Unity Player */
 .unity-player {
-    height: calc(100vh - 250px);
+    max-height: calc(100vh - 250px);
     aspect-ratio: 16/10;
     border: 0;
     overflow: hidden;
