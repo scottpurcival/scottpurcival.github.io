@@ -359,6 +359,12 @@ img {
         margin-bottom: 8px;
     }
 
+    .dev-role {
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
     .dev-date {
         text-align: center;
         font-size: 1rem;
