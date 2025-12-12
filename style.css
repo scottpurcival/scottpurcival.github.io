@@ -57,7 +57,7 @@ header
 .content {
     margin-left: auto;
     margin-right: auto;
-    /*max-width: 70vw;*/
+    max-width: 1920px;
 }
 
 ul {
@@ -286,6 +286,24 @@ img {
     font-size: 20px;
 }
 
+.button-tight {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    color: #eff6ee !important;
+    border: solid #eff6ee;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 8px 12px;
+    text-align: center;
+}
+.button-tight:hover {
+    color: #000 !important;
+    background-color: #eff6ee !important;
+}
+.button-tight a {
+    text-decoration: none !important;
+}
+
 .button-menu {
     color: #eff6ee !important;
     background-color: inherit !important;
@@ -337,7 +355,7 @@ img {
 
 .showcase-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
     padding-bottom: 16px;
     justify-content: center;
 }
@@ -551,6 +569,8 @@ input,textarea,label
 .section-portfolio-personal { color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); }
 
 .section-portfolio-professional { color: #eff6ee !important; background-color: #080a0c !important }
+
+.section-portfolio-unreleased { color: #eff6ee !important; background-color: #080a0c !important }
 
 .section-media {
     padding-top: 16px;
