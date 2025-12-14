@@ -669,3 +669,10 @@ input,textarea,label
     border: 0;
     overflow: hidden;
 }
+
+.blog-media {
+    padding-top: 1.5rem;
+    video { width: 80%; }
+    img { width: 80%; }
+    p { font-style: italic; }
+}

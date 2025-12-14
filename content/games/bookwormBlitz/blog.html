@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Scott Purcival - Game Programmer</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../../images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Symbols:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../../fontawesome/css/all.min.css">
+
+    <!-- Contact scrambler -->
+    <script type="text/javascript">
+        function scrambleIt(b,a,css,text){
+            var c = ".com";
+            document.write('<a href="mailto:'+a+'@'+b+c+'" class="'+css+'">'+text+'</a>');
+        }
+    </script>
+
+    <link rel="stylesheet" href="../../../style.css?date=20251202">
+</head>
+
+<body>
+<!-- Navbar (sit on top) -->
+<div class="top">
+    <div class="bar section-titlebar padding">
+        <div class="titlebar-left">
+            <a href="index.html#home"><h1 class="bebas-neue-regular">Scott Purcival</h1></a>
+            <a href="index.html#home"><h2 class="noto-sans-400 tagline">Game Programmer</h2></a>
+        </div>
+        <div style="flex-grow: 1"></div>
+        <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/scott-purcival-12145356/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/scottpurcival" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <script type="text/javascript">scrambleIt("purcival","scott","","<i class=\"fa-regular fa-envelope\"></i>");</script>
+        </div>
+        <div class="mobile-home-button">
+            <a href="../../../index.html#home"><i class="fas fa-home"></i></a>
+        </div>
+    </div>
+    <div class="bar center section-menubar padding hide-small">
+        <div class="noto-sans-400">
+            <a href="../../../index.html" class="bar-item button-menu">Home</a>
+            <!--<a href="blog.html" class="bar-item button-menu">Blog</a>-->
+            <a href="../../../portfolio.html" class="bar-item button-menu">Portfolio</a>
+            <a href="../../../media.html" class="bar-item button-menu">Media</a>
+            <!--<a href="tools.html" class="bar-item button-menu">Tools</a>-->
+            <a href="../../../contact.html" class="bar-item button-menu">Contact</a>
+        </div>
+    </div>
+</div>
+
+<!-- Page content -->
+<header class="section-subpage-header" id="home">
+    <div class="header-content padding-header-small">
+        <div class="col l10 m8 s10 center content padding-sub-row">
+            <h1 class="content-block-title bebas-neue-regular">Bookworm Blitz</h1>
+            <h2 class="content-block-sub-title noto-sans-400 tagline padding-bottom-16">The two-week game</h2>
+            <p>21st March 2021</p>
+        </div>
+    </div>
+</header>
+
+<div class="section-media anchor-scroll-padding content-block">
+    <div class="col content l10 m11 padding-sub-row">
+        <h3>It started with an idea…</h3>
+        <p>
+            Western Downs Libraries used to host an annual event for kids called ‘Fun Palaces’.<br>
+            Terrible name, great event. It was essentially a STEAM showcase, and for those who don’t know, STEAM stands for Science Technology Engineering Art and Maths.
+        </p>
+        <p>
+            As Digital Support Officer for Western Downs Libraries, and resident game programmer, it was my job to come up with innovative tech experiences that pushed the boundaries of what had been done the year before.<br>
+            The previous year, I had created a Greenscreen application to leverage the greenscreen that the library had invested in before I was hired, and I had also experimented a little with the Kinect in Unity for motion capture.
+        </p>
+        <p>
+            This year I decided to build on some inspiration that I had seen online and create a mega-touchscreen for kids to play on!
+        </p>
+        <h3>Research</h3>
+        <p>
+            Initially I figured I would just create a simple game based on ‘mouse clicks’ and use a commercial Kinect touchscreen solution to make it all run.<br>
+            After trying a number of solutions however, I discovered that the available solutions were either buggy and did not work consistently, or were too expensive.<br>
+            I already had a Kinect plugin for unity from the previous year’s mo-cap project, so I decided to try my hand at my own depth sensing plugin for Unity.
+        </p>
+        <h3>The Touchscreen</h3>
+        <p>
+            The Kinect SDK provides a couple of interfaces. One is the skeletal style interface, where the Kinect does all of the processing and the programmer is simply presented with a ‘skeleton’ which they can map to their own characters’ bones.<br>
+            The other interface, which we were more interested in, was raw depth data.
+        </p>
+        <p>
+            By pointing the Kinect sensor at a wall, and reading the distance to the wall, we can sense if an object, such as a hand, comes between the wall and the sensor.<br>
+            By setting a minimum and maximum distance, which is within an inch or so of the wall, we can detect ‘touches’ without falsely triggering a touch from an arm or a body which is further away from the wall.
+        </p>
+        <p>
+            Of course this required a calibration step, to find the initial distance of the wall from the sensor.<br>
+            I created a calibration routine with averaged the distance over 5 seconds, as the sensor is prone to some distance jitter.<br>
+            I also added a calibration step where the operator would pick a point on each corner of the projected screen, as the Kinect saw it. This was required to map the projected screen to screen space on the computer.<br>
+            I then ran the calibrated points through and orthographic projection transform matrix in realtime to map the touches on the wall to screen space.
+        </p>
+        <p>
+            Due to CPU limitations on the target device (an old dual core Pentium NUC) the touchable area was split into a 32 by 18 matrix, and whenever a touch was detected, any enemy in the touched cells would have a ‘hit’ function called on it.<br>
+            For performance a simple distance calculation was performed from the centre point of the cell to the centre point of the enemy.
+        </p>
+        <h3>The Game</h3>
+        <p>
+            Now that the touchscreen was working, we started to build a game on top of it.
+        </p>
+        <p>
+            Since it was for the library, we went with a bookworm theme. The player had to stop the bookworms from eating all the books!<br>
+            The library had a staff member, Alicia Streten, who was also a budding artist, so I brought her on board to create the artwork. Given the specifications, she was able to create excellent art in less than a week for the game.
+        </p>
+        <p>
+            The game loop was simple, enemies would spawn on the bookshelf, and wander left to right. Some enemies were faster than others, and therefore worth more points.<br>
+            The players would have 90 seconds to kill as many worms as they could and the goal was to achieve the best high score.
+        </p>
+        <h3>Testing and Reception</h3>
+        <p>
+            We tested the game internally with library staff and student volunteers.
+        </p>
+        <p>
+            The initial reaction was that we needed to add more worms, and that they were too easy to kill by hitting the wall with your hands. Also the worms were often too high for shorter users to reach the top of the projected screen, and users bodies would block the image from the projector.
+        </p>
+        <p>
+            We decided to use soft beanbags, and instead let the players throw the bags from a distance to try and hit the worms.<br>
+            This added the perfect level of difficulty, and solved our height and player obstructing the projection issues.
+        </p>
+        <div class="blog-media">
+            <img src="kinectSetup.jpg" alt="Bookworm Blitz at Fun Palaces 2019" class="blog-image">
+            <p>
+                Bookworm Blitz at Fun Palaces 2019
+            </p>
+        </div>
+        <p>
+            We unveiled the game at Fun Palaces the following week and it was an instant mega hit.<br>
+            Children were so engrossed in the game that parents often had to drag the children away, only for the kids to return later for another go.<br>
+            Parents would often see how much fun the children were having and join in themselves, and beating the high score proved the perfect goal, and led to frenzied play of over six children at a time.
+        </p>
+        <p>
+            The game was so popular it was never idle from the start to the end of the day, and was considered a great success.
+        </p>
+        <p>
+            The game was deployed a number of times at subsequent events in the following years, each time it was received very well by all.
+        </p>
+        <div class="blog-media">
+            <video controls>
+                <source src="bookwormLive.webm" type="video/webm">
+                <source src="bookwormLive.mp4" type="video/mp4">
+            </video>
+            <p>
+                Children playing Bookworm Blitz at Fun Palaces 2019.
+            </p>
+        </div>
+        <h3>Conclusion</h3>
+        <p>
+            The game project timeline was two weeks from inception to completion.
+        </p>
+        <p>
+            Given more time, I would have liked to have optimised the touch detection routine, as it was a little slow, and this could lead to delayed or missed touches at times if the players were too fast.
+        </p>
+        <p>
+            As far as art direction, I was very happy with the art that Alicia was able to come up with in the short time allocated. The UI could do with more polish, and I would like a persistent high score system, however the players did not seem to mind.
+        </p>
+        <p>
+            Overall, I was pleased with the execution of the project, and the only time I would consider as ‘wasted’ was the excessive amount of time I spent trying to get commercial touch solutions to work at the beginning.
+        </p>
+        <p>
+            <i>Bookworm Blitz was made for, and is the property of Western Downs Regional Council as a paid project, and as such I am unable to provide the game for download or play here.</i>
+        </p>
+    </div>
+</div>
+
+<div class="section-contact anchor-scroll-padding content-block" id="contact">
+    <div class="col l6 m8 content center padding-row">
+        <h3>Get In Contact</h3>
+        <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/scott-purcival-12145356/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/scottpurcival" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <script type="text/javascript">scrambleIt("purcival","scott","","<i class=\"fa-regular fa-envelope\"></i>");</script>
+        </div>
+        <script type="text/javascript">scrambleIt("purcival","scott","button-normal","Send me an email");</script>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="center section-footer padding-16 content-block">
+    <p>© 2025 Scott Purcival</p>
+</footer>
+</body>
+
+</html>
