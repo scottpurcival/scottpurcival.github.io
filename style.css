@@ -402,6 +402,7 @@ img {
         font-style: italic;
         font-size: 0.8rem;
         color: #bdc4bc;
+        min-height: 1.2rem;
     }
 
     .dev-role {
