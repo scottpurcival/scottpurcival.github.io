@@ -258,9 +258,12 @@ img {
     padding-top: 16px !important;
     padding-bottom: 16px !important
 }
+
 .padding-bottom-16 {padding-bottom: 16px;}
 .padding-bottom-32 {padding-bottom: 32px;}
 .padding-bottom-48 {padding-bottom: 48px;}
+
+.margin-bottom-8 {margin-bottom: 8px}
 
 /* Buttons */
 .button-normal {
@@ -567,11 +570,13 @@ input,textarea,label
 
 .section-footer {color: #fff !important; background-color: #000 !important}
 
-.section-portfolio-personal { color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); }
-
 .section-portfolio-professional { color: #eff6ee !important; background-color: #080a0c !important }
 
-.section-portfolio-unreleased { color: #eff6ee !important; background-color: #080a0c !important }
+.section-portfolio-professional-tools { color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); }
+
+.section-portfolio-personal { color: #eff6ee !important; background-color: #080a0c !important }
+
+.section-portfolio-unreleased { color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); }
 
 .section-media {
     padding-top: 16px;
