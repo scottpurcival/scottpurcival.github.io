@@ -268,6 +268,7 @@ img {
 /* Buttons */
 .button-normal {
     background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     color: #eff6ee !important;
     border: solid #eff6ee;
@@ -291,6 +292,7 @@ img {
 
 .button-tight {
     background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     color: #eff6ee !important;
     border: solid #eff6ee;
@@ -520,7 +522,12 @@ input,textarea,label
 
 .tagline {color: #f0c45c !important;}
 
-.section-menubar {color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.2) !important; backdrop-filter: blur(10px);}
+.section-menubar {
+    color: #eff6ee !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
 
 .section-cta {color: #eff6ee !important; background-color: #d08a27 !important}
 
@@ -557,31 +564,49 @@ input,textarea,label
     color: #ffffff !important;
     background-color: rgba(0, 0, 0, 0.2) !important;
     flex-grow: 1;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
 .section-showcase {
     color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.5) !important;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 64px 0 64px 0;
 }
 
-.section-contact {color: #ffffff !important; background-color: rgb(8, 10, 12) !important; backdrop-filter: blur(10px);}
+.section-contact {
+    color: #ffffff !important;
+    background-color: rgb(8, 10, 12) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
 
 .section-footer {color: #fff !important; background-color: #000 !important}
 
 .section-portfolio-professional { color: #eff6ee !important; background-color: #080a0c !important }
 
-.section-portfolio-professional-tools { color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); }
+.section-portfolio-professional-tools {
+    color: #eff6ee !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
 
 .section-portfolio-personal { color: #eff6ee !important; background-color: #080a0c !important }
 
-.section-portfolio-unreleased { color: #eff6ee !important; background-color: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); }
+.section-portfolio-unreleased {
+    color: #eff6ee !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
 
 .section-media {
     padding-top: 16px;
     color: #eff6ee !important;
     background-color: rgba(0, 0, 0, 0.5) !important;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
