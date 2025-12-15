@@ -13,13 +13,11 @@ body
     min-height: 100vh;
 
     margin: 0;
-    background-color: black;
-    background-image: url(images/newbgsml.jpg);
-    background-position: center center;
-    background-size: cover;
+    background: black url(images/newbgsml.jpg) no-repeat fixed center center;
     -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
