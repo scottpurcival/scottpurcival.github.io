@@ -529,7 +529,10 @@ input,textarea,label
     }
 }
 
-.tagline {color: #f0c45c !important;}
+.tagline {
+    color: #f0c45c !important;
+    margin-bottom: 2rem;
+}
 
 .section-menubar {
     color: #eff6ee !important;
@@ -658,3 +661,20 @@ input,textarea,label
 .blog-media video { width: 80%; }
 .blog-media img { width: 80%; }
 .blog-media p { font-style: italic; }
+
+/* Skills */
+.skill-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-bar-skill {
+    color: #000;
+    background-color: #eff6ee;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    border-radius: 0.8rem;
+}
