@@ -524,7 +524,7 @@ input,textarea,label
 }
 @media (max-width: 800px) {
     .social-buttons {display: none;}
-    .titlebar-left {
+    .section-titlebar .titlebar-left {
         flex-direction: column;
     }
 }
@@ -670,11 +670,17 @@ input,textarea,label
     justify-content: center;
     flex-wrap: wrap;
 }
-
 .skill-bar-skill {
     color: #000;
     background-color: #eff6ee;
     padding: 0.25rem 0.5rem;
     margin: 0.25rem;
     border-radius: 0.8rem;
+}
+.showcase-card .skill-bar {
+    justify-content: flex-start;
+}
+.showcase-card .skill-bar-skill {
+    font-size: 0.8rem;
+    border-radius: 0.64rem;
 }
